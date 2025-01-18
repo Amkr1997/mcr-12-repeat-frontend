@@ -45,9 +45,10 @@ const Home = () => {
     <main className="container py-4">
       <input
         placeholder="Search by job title..."
-        className="form-control w-50"
+        className="form-control"
         value={searchInp}
         onChange={(e) => setSearchInp(e.target.value)}
+        style={{ maxWidth: "400px" }}
       />
       <h2 className="py-3">All Jobs</h2>
 
