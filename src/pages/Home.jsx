@@ -35,11 +35,11 @@ const Home = () => {
     getJobs();
   }, []);
 
-  const searchedJob = jobData?.filter((job) => {
-    if (job?.jobTitle?.toLowerCase().includes(searchInp.toLowerCase())) {
-      return job;
-    }
-  });
+  const searchedJob = searchInp.trim()
+    ? jobData?.filter((job) =>
+        job?.jobTitle?.toLowerCase().includes(searchInp.toLowerCase())
+      )
+    : [];
 
   return (
     <main className="container py-4">
